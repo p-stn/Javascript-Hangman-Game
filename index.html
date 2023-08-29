@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANGMAN</title>
+    <link rel="stylesheet" href="css/dist/master.css">
+    <link rel="shortcut icon" href="img/haang.png" type="image/x-icon">
+</head>
+
+<body class=" bg-clip-text bg-[#000000] text-white">
+    <div class="w-full ">
+        <div class="container mx-auto ">
+            <h1 class="fixed bottom-0 left-0 hidden lg:flex">By Pooya Saadatian 🤙</h1>
+            <div class="main mx-[10px]">
+                <div class="flex flex-col items-center justify-center text-center">
+                    <h1 class="text-[50px] lg:text-[60px] ">HANGMAN</h1>
+                    <h2 class="text-[23px] lg:text-[30px]  mb-[20px]  ">VANILLA JAVASCRIPT HANGMAN GAME</h2>
+                    <h3 class="text-[20px] lg:text-[25px] ">Use the alphabet below to guess the word, or click hint to
+                        get a clue.</h3>
+                </div>
+                <div class="btn mt-[40px] flex flex-wrap flex-col items-center justify-center">
+                    <ul class="char flex  flex-wrap justify-between w-full  lg:w-[820px] text-[50px] ">
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="a">a</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="b">b</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="c">c</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="d">d</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="e">e</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="f">f</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="g">g</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="h">h</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="i">i</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="j">j</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="k">k</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="l">l</li>
+                            
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="m">m</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="n">n</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="o">o</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="p">p</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="q">q</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="r">r</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="s">s</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="t">t</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="u">u</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="v">v</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="w">w</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="x">x</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value="y">y</li>
+                        <li class="w-[35px] lg:w-[70px] h-[35px] lg:h-[70px] m-[3px] lg:m-[10px] text-[15px] lg:text-[35px] cursor-pointer flex items-center justify-center rounded-[5px] lg:rounded-[15px] text-center bg-white text-black opacity-85"
+                            value=" ">z</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center justify-center text-center">
+                    <h3 class="category text-[20px] lg:text-[30px] mt-[40px]"></h3>
+                    <h3 class="lives text-[30px] mt-[10px]"></h3>
+
+                    <h4 class="vrb my-[10px] text-[30px] lg:text-[60px]"></h4>
+                    <h3 class="clue text-[20px] lg:text-[30px]"></h3>
+                    <div class="my-[30px]">
+                        <button
+                            class="cluHint text-[20px] lg:text-[30px] mx-[10px] p-[10px] lg:p-[20px]  rounded-[5px] lg:rounded-[10px] border border-white hover:bg-white hover:text-black  duration-[300ms]">Hint</button>
+                        <button
+                            class="play    text-[20px] lg:text-[30px] mx-[10px] p-[10px] lg:p-[20px] rounded-[5px] lg:rounded-[10px] border border-white hover:bg-white hover:text-black  duration-[300ms]">Play
+                            again</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="js/app.js"></script>
+    <!-- <script type="module" src="js/app2.js"></script> -->
+    
+</body>
+
+</html>

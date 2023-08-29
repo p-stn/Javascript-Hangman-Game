@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'hangman';
+    src: url("../src/font/Arthead-Regular.otf") format("opentype");
+  }
