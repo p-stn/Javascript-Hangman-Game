@@ -1,5 +1,5 @@
 # Javascript-Hangman-Game
-## [Demo Trick](https://p-stn.github.io/Javascript-Hangman-Game/)
+## [Demo Game](https://p-stn.github.io/Javascript-Hangman-Game/)
 
 ![hng](https://github.com/p-stn/Javascript-Hangman-Game/assets/63667741/af339751-1076-41c8-ad7b-085011fbe7e7)
 
